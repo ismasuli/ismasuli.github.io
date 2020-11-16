@@ -53,15 +53,15 @@
                   },
                   body: JSON.stringify(peliculas)
                 });
-                const {url} = await res.json();
-                return url;               
+                const {uri} = await res.json();
+                return uri;               
             } catch (err) {
                 alert("No se ha podido crear el endpoint.")
             }
         }
-        const getAPI = async (url) => {
+        const getAPI = async (uri) => {
             // Completar: Llamar a la API para leer la información guardada en myjson a través de la API
-            let response = await fetch(url);
+            let response = await fetch(uri);
             return await response.json();
         }
 
